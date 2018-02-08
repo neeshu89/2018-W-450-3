@@ -17,7 +17,7 @@ class Twitterator:
                            credentials['CONSUMER_KEY'],
                            credentials['CONSUMER_SECRET'])
 
-        self.mongo_client = MongoClient('34.209.155.42', 27016)
+        self.mongo_client = MongoClient('this_mongo')
         self.database_reference = self.mongo_client.twitter
         self.collection_reference = self.database_reference.tweets
 
@@ -76,5 +76,6 @@ class Twitterator:
                     self.last_time = self.now
 
             except StopIteration:
+                self.twitterator = None
                 now = datetime.datetime.now()
                 self._log_count("Dead Iteration Error")
