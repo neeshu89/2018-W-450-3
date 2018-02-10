@@ -20,6 +20,9 @@ if __name__ == "__main__":
 
     except FileNotFoundError:
         print("Did you forget to create you credentials.yml file in the data directory?")
+<<<<<<< HEAD
         # except function only gets called in the case of an error/exception
  
         # if error with file for get_credentials - serve up error
+=======
+>>>>>>> 8b40bf09c49b7f83857b2d1843e15406d1e0aa75
