@@ -36,3 +36,8 @@ RUN conda config --system --append channels r && \
 
 RUN conda install pymongo 
 RUN pip install twitter
+<<<<<<< HEAD
+=======
+RUN conda install -c r r-igraph
+RUN conda install -c conda-forge r-networkd3
+>>>>>>> 3edced5b27ac4e5a737ab3f0afcc374804b731a1
