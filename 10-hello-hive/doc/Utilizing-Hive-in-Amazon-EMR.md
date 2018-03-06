@@ -16,7 +16,7 @@ Hive is a powerful SQL-like language that allows us to query Amazon EMR. Hive wa
 3. Create a table for the `log_data`
 
    ```
-   CREATE EXTERNAL TABLE log_data (
+   CREATE EXTERNAL TABLE log_data_2 (
            timestring STRING,
            host STRING,
            application STRING,
@@ -24,7 +24,7 @@ Hive is a powerful SQL-like language that allows us to query Amazon EMR. Hive wa
            username STRING)
        ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
        STORED AS TEXTFILE
-       LOCATION 's3://your-bucket/input';
+       LOCATION 's3://aneesh-jain/mock/input';
    ```
 
 4. Run SQL Queries on the `log_data` table:
@@ -40,7 +40,7 @@ Hive is a powerful SQL-like language that allows us to query Amazon EMR. Hive wa
 5. Write the results to an external file:
 
    ```
-   insert overwrite directory  's3://your-bucket/output/'
+   insert overwrite directory  's3://aneesh-jain/mock/output/'
    row format delimited
    fields terminated by ','
    stored as textfile
